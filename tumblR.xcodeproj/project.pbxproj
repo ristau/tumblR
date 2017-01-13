@@ -13,6 +13,7 @@
 		E53CD9E21E294ED3008AC35A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53CD9E11E294ED3008AC35A /* Assets.xcassets */; };
 		E53CD9E51E294ED3008AC35A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53CD9E31E294ED3008AC35A /* LaunchScreen.storyboard */; };
 		E53CD9ED1E295132008AC35A /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD9EC1E295132008AC35A /* PhotosViewController.swift */; };
+		E53CD9EF1E295919008AC35A /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53CD9EE1E295919008AC35A /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E53CD9E41E294ED3008AC35A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E53CD9E61E294ED3008AC35A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53CD9EC1E295132008AC35A /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		E53CD9EE1E295919008AC35A /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +80,13 @@
 		E53CD9D91E294ED3008AC35A /* tumblR */ = {
 			isa = PBXGroup;
 			children = (
+				E53CD9EC1E295132008AC35A /* PhotosViewController.swift */,
 				E53CD9DA1E294ED3008AC35A /* AppDelegate.swift */,
 				E53CD9DE1E294ED3008AC35A /* Main.storyboard */,
 				E53CD9E11E294ED3008AC35A /* Assets.xcassets */,
 				E53CD9E31E294ED3008AC35A /* LaunchScreen.storyboard */,
 				E53CD9E61E294ED3008AC35A /* Info.plist */,
-				E53CD9EC1E295132008AC35A /* PhotosViewController.swift */,
+				E53CD9EE1E295919008AC35A /* PhotoCell.swift */,
 			);
 			path = tumblR;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53CD9DB1E294ED3008AC35A /* AppDelegate.swift in Sources */,
+				E53CD9EF1E295919008AC35A /* PhotoCell.swift in Sources */,
 				E53CD9ED1E295132008AC35A /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
