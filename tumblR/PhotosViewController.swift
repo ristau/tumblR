@@ -12,6 +12,7 @@ import AFNetworking
 class PhotosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   var posts: [NSDictionary] = []
+
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -48,15 +49,24 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
     
     let post = posts[indexPath.row]
-    let timestamp = post["timestamp"] as? NSNumber
-        print("Timestamp: \(timestamp)")
-    let caption = post["caption"] as? String
-    print("Caption: \(caption)")
+    
+    if let datePublished = post["date"] as? String {
+      print("Date Published: \(datePublished)")
+      cell.timeStampLabel.text = datePublished
+
+    }
+    
+    if let caption = post["summary"] as? String {
+      print("Summary: \(caption)")
+   
+      cell.captionLabel.text = caption
+    }
     
     if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
          let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
       
         if let imageUrl = URL(string: imageUrlString!) {
+
           cell.photoImage.setImageWith(imageUrl)
         } else {
           print("could not get image")
@@ -64,17 +74,12 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     } else {
       print("error in getting images")
     }
-    
-   // cell.timeStampLabel.text = timestamp
-    cell.captionLabel.text = "Caption # \(indexPath.row)"
-    
-
-    
-    
     return cell
   }
   
-  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
   
   
   // MARK: - Network Request 
@@ -113,18 +118,18 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
  
     
   }
-  
-  
-  
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+      
+      var vc = segue.destination as! PhotoDetailsViewController
+     
+      var indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+      
+
+  
     }
-    */
+  
 
 }
