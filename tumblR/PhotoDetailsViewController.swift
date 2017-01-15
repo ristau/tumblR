@@ -10,8 +10,9 @@ import UIKit
 
 class PhotoDetailsViewController: UIViewController {
   
+  var post: NSDictionary! 
   
-  var photoUrl: URL!
+  //var photoUrl: URL!
   
   // consider to delete the summary Label, need to work on passing data 
   @IBOutlet weak var summaryLabel: UILabel!
@@ -21,6 +22,20 @@ class PhotoDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      let summary = post["summary"] as? String
+      summaryLabel.text = summary!
+      
+      if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
+        
+        let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
+        let imageUrl = URL(string: imageUrlString!)
+        photoImage.setImageWith(imageUrl!)
+        
+      }
+      
+      
+    
+      print("post")
         // Do any additional setup after loading the view.
     }
 
