@@ -1,6 +1,6 @@
 # Project 1A (Lab) - *TumblR*
 
-**TumblR** is an app that accesses the Tumblr app and displays selected content from "Humans of New York" 
+**TumblR** is an app that connects to the tumblr API and displays content from "Humans of New York" 
 
 Time spent: **2** hours spent in total
 
@@ -37,13 +37,13 @@ GIF created with LiceCap (http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+
 
 # Project 1B (Lab Week 2) - *TumblR*
 
 **TumblR** displays selected content from "Humans of New York" 
 
-Time spent: **1** hours spent in total
+Time spent: **3** hours spent in total
 
 ## User Stories
 
@@ -55,9 +55,9 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-- [ ] Added avatar
-- [ ] Added publish dates
-- [ ] Zoomable photo view
+- [X] Added avatar
+- [X] Added publish dates
+- [X] Zoomable photo view
 
 The following **additional** features are implemented:
 
@@ -78,7 +78,7 @@ GIF created with LiceCap (http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Infinite scroll needs further tweaks, discuss with codepath
 
 ## License
 
