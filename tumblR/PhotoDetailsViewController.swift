@@ -16,7 +16,6 @@ class PhotoDetailsViewController: UIViewController {
   
   // consider to delete the summary Label, need to work on passing data 
   @IBOutlet weak var summaryLabel: UILabel!
-  
   @IBOutlet weak var photoImage: UIImageView!
 
     override func viewDidLoad() {
@@ -33,26 +32,41 @@ class PhotoDetailsViewController: UIViewController {
         
       }
       
+      let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
       
-    
+      photoImage.isUserInteractionEnabled = true
+      photoImage.addGestureRecognizer(tapGestureRecognizer)
+      
       print("post")
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
+  
+  
+  @IBAction func didTap(_ sender: UITapGestureRecognizer) {
     
+    print("Did hit tap")
+    performSegue(withIdentifier: "FullScreen", sender: UITapGestureRecognizer.self)
+    
+  }
+  
 
-    /*
+
+  
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      
+      print("Preparing to go to full screen")
+      
+      if segue.identifier == "FullScreen" {
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let destinationvc = segue.destination as! FullScreenPhotoViewController
+        destinationvc.post = post
+  
+      }
     }
-    */
+  
 
 }
