@@ -8,7 +8,9 @@ Time spent: **2** hours spent in total
 
 The following **required** functionality is complete:
 
-- [X] User can view a list of posts from the app.
+- [X] Project is successfully set up
+- [X] App connects to the tumblr api
+- [X] User can view a list of photos in the feed
 
 
 The following **optional** features are implemented:
@@ -31,7 +33,7 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/K3iNfXF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with LiceCap (http://www.cockos.com/licecap/).
 
 ## Notes
 
@@ -41,18 +43,21 @@ Describe any challenges encountered while building the app.
 
 **TumblR** displays selected content from "Humans of New York" 
 
-Time spent: **2** hours spent in total
+Time spent: **1** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
 - [X] User can view detailed page for a selected post
-
+- [X] Pull to refresh is implemented
+- [X] Infinited scrolling is implemented 
 
 The following **optional** features are implemented:
 
-
+- [ ] Added avatar
+- [ ] Added publish dates
+- [ ] Zoomable photo view
 
 The following **additional** features are implemented:
 
@@ -67,9 +72,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/K3iNfXF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='...' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with LiceCap (http://www.cockos.com/licecap/).
 
 ## Notes
 
