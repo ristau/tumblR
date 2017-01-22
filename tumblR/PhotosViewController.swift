@@ -18,6 +18,8 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
   
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      self.navigationItem.title = "Humans of New York"
 
       tableView.dataSource = self
       tableView.delegate = self
